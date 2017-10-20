@@ -2,7 +2,12 @@
 var express = require('express');
 const path = require('path');
 const cors = require('cors');
+
+var alipay = require('../testdata/pay.json')
+var alipay1 = require('../testdata/pay1.json')
 var app = express();
+
+//app.use(express.bodyParser());
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -33,6 +38,16 @@ app.get('/test', function(req, res){
 });
 
 app.get('/pay', function(req, res){
+  console.log(req.query);
+  res.json(alipay);
+});
+
+app.get('/pay1', function(req, res){
+  console.log(req.query);
+  res.json(alipay1);
+});
+
+app.get('/index', function(req, res){
   res.sendFile(resolve('/dist/index.html'));
 });
 

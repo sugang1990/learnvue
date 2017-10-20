@@ -1,5 +1,5 @@
 <template>
-  <div class="payproject">
+  <!--<div class="payproject">
     <div class="container">
       <div class="row">
         <div class="col-md-2">2222</div>
@@ -132,7 +132,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 </template>
 
 <script>
